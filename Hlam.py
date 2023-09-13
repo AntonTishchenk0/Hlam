@@ -183,3 +183,14 @@
 #     print('YES')
 # else:
 #     print("NO")
+
+
+# for i in range(5):
+#     print(i, end= "! ")
+# print()
+
+# print(*range(5), sep="! ", end= "! ")
+# print()
+
+# for i in range(5):
+#     print(i, sep="! ")
