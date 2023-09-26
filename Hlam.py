@@ -210,3 +210,25 @@
 # else:
 #     print('Число неинтересное')
 
+# Task 13:
+# Рекурсионный метод возведения в степень.
+
+# def f(a, b):
+#     res = a ** b
+#     return res
+
+# a, b = int(input('Input a number: ')), int(input('Input a number: '))
+# print(f(a, b))
+
+# Task 14: 
+# Сложение чисел через рекурсию, не используя сложения.
+
+# def sum(a, b):
+#     if a == 0:
+#         return b
+#     return sum(a - 1, b + 1)
+
+# a = int(input("Введите число a: "))
+# b = int(input("Введите число b: "))
+
+# print(sum(a, b))
