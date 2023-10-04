@@ -247,3 +247,9 @@
 # for i in range(n):
 #     print(i + 1, m)
 #     m += m * p / 100
+
+
+# total = 0
+# for i in range(1, 6):
+#     total += i
+#     print(total, end=" ")
