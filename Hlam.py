@@ -253,3 +253,22 @@
 # for i in range(1, 6):
 #     total += i
 #     print(total, end=" ")
+
+# Task 16:
+# Задача про ведьмака и монеты
+
+# n = int(input())
+# count = 0
+# while n >= 25:
+#     count += 1
+#     n = n - 25
+# while 10 <= n < 25:
+#     count += 1
+#     n = n -10
+# while 5 <= n < 10:
+#     count += 1
+#     n = n - 5
+# while 1 <= n < 5:
+#     count += 1
+#     n = n - 1
+# print(count) 
