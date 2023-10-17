@@ -272,3 +272,39 @@
 #     count += 1
 #     n = n - 1
 # print(count) 
+
+# Task 17:
+# for i in range(10):
+#     print(i, end='*')
+#     if i > 6:
+#         break
+
+# Task 18:
+# i = 100
+# while i > 0:
+#     if i == 40:
+#         break
+#     print(i, end='*')
+#     i -= 20
+
+# Task 19:
+# result = 0
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     result += i
+# print(result)
+
+# Task 20:
+# mult = 1
+# for i in range(1, 11):
+#    if i % 2 == 0:
+#       continue
+#    if i % 9 == 0:
+#       break
+#    mult *= i
+# print(mult)
+
+# n = int(input())
+# for i in range(1, n):
+#     print(i)
