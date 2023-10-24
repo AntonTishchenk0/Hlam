@@ -370,3 +370,8 @@
 #     product *= digit
 #     n //= 10
 # print(product)
+
+
+a = 2
+b = 3
+print(a + b)
