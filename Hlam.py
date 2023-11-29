@@ -403,5 +403,22 @@
 
 # Task 27:
 
+# n = int(input())
+# for i in range(1, n + 1):
+#     if i == 1 or i == n:
+#         print('*' * 19)
+#     else:
+#         print('*' + ' ' * 17 + '*')
+        
+# Task 28:
+# n = int(input())
+# while n > 999: 
+#     n //= 10
+# print(n % 10)
 
+# Task 29:
 
+# n = input()
+# for i in range(-1, -len(n) - 1, -1):
+#     print(n[i], sep='')
+    
