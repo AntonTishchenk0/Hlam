@@ -422,4 +422,15 @@
 # for i in range(-1, -len(n) - 1, -1):
 #     print(n[i], sep='')  
 
-  
+# Task 30:
+# n = int(input())
+# my_list = list('abcdefghijklmnopqrstuvwxyz')
+# my_lst = []
+# for i in range(n):
+#     my_lst += my_list[i]
+# print(my_lst)
+
+# Task 31
+
+# languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+# print(languages[-1::-1])
