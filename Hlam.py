@@ -434,3 +434,26 @@
 
 # languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
 # print(languages[-1::-1])
+
+# Task 32
+
+# numbers = [1, 78, 23, -65, 99, 9089, 34, -32, 0, -67, 1, 11, 111]
+# sp = []
+# for i in range(len(numbers)):
+#     sp.append(numbers[i]*numbers[i])
+# print(sum(sp))
+
+# Task 33
+
+# n = int(input())
+# sp = []
+# for _ in range(n):
+#     x = int(input())
+#     sp.append(x)
+# sp1 = []
+# for i in range(len(sp)):
+#     sp1.append(sp[i] * sp[i] + 2 * sp[i] + 1)     
+# print(*sp, sep='\n')
+# print()
+# print(*sp1, sep='\n')
+
