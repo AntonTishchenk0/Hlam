@@ -142,7 +142,7 @@
 # Task 9:
 # Даны две различные клетки шахматной доски. Напишите программу, которая определяет, может ли слон 
 # попасть с первой клетки на вторую одним ходом. Программа получает на вход четыре числа от 1 до 8 каждое, 
-#задающие номер столбца и номер строки сначала для первой клетки, потом для второй клетки. 
+# задающие номер столбца и номер строки сначала для первой клетки, потом для второй клетки.
 # Программа должна вывести «YES», если из первой клетки ходом слона можно попасть во вторую или «NO» в противном случае.
 
 # a = int(input())
@@ -385,7 +385,7 @@
 #         for m in range(1, 12):
 #             if 28 * n + 30 * k + 31 * m == 365:
 #                 print('n =', n, 'k =', k, 'm =', m)
-                
+
 # Task 26:  
 
 # Имеется 100 рублей. Сколько быков, коров и телят можно купить на все эти деньги, 
@@ -409,7 +409,7 @@
 #         print('*' * 19)
 #     else:
 #         print('*' + ' ' * 17 + '*')
-        
+
 # Task 28:
 # n = int(input())
 # while n > 999: 
@@ -457,3 +457,52 @@
 # print()
 # print(*sp1, sep='\n')
 
+# Task 34
+
+# x = list(input())
+# sp = []
+# for i in range(len(x)):
+#     if x[i] == x[i].upper() and x[i] != ' ':
+#         sp.append(x[i])
+# s = list(sp)
+# x = '.'.join(s)        
+# print(x)
+
+# Task 35  
+
+# x = 'BEEGEEK'
+# chars = list(x)
+# x = '.'.join(chars)
+# print(x, end='.')
+
+# Task 36
+
+# x = ('C:\Windows\System32\calc.exe').split('\\')
+# print(*input().split('\\'), sep='\n')
+
+# Task 37
+
+# x = input().split()
+# for i in range(len(x)):
+#     print(x[i])
+
+# Task 38
+
+# def draw_triangle(fill, base):
+#     for i in range(base // 2):
+#         print(fill * (i + 1))
+#     for i in range(base // 2, -1, -1):
+#         print(fill * (i + 1))      
+# fill = input()
+# base = int(input())
+# draw_triangle(fill, base)
+
+
+# Task 39
+
+slov = {1: 'Hi', 2: 'By'}
+print(slov)
+slov[True] = 'Истина'
+print(slov)
+slov[False] = 'Ложь'
+print(slov)
