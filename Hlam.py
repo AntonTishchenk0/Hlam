@@ -457,3 +457,9 @@
 # print()
 # print(*sp1, sep='\n')
 
+# Task 34
+
+# sp = []
+# for i in range(int(input())):
+#     sp.append(i)
+# print(sp)    
