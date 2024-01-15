@@ -500,9 +500,9 @@
 
 # Task 39
 
-slov = {1: 'Hi', 2: 'By'}
-print(slov)
-slov[True] = 'Истина'
-print(slov)
-slov[False] = 'Ложь'
-print(slov)
+# slov = {1: 'Hi', 2: 'By'}
+# print(slov)
+# slov[True] = 'Истина'
+# print(slov)
+# slov[False] = 'Ложь'
+# print(slov)
