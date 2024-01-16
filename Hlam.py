@@ -432,7 +432,8 @@
 
 # Task 31
 
-# languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
+# languages = ['Chinese', 'Spanish', 'English', 'Hindi',
+# 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese', 'Lahnda']
 # print(languages[-1::-1])
 
 # Task 32
@@ -462,4 +463,22 @@
 # sp = []
 # for i in range(int(input())):
 #     sp.append(i)
-# print(sp)    
+# print(sp)
+
+# Task 35
+
+
+# def set_plus(a, b):
+#     res = a + b
+#     return res
+#
+#
+# def set_multi(a, b):
+#     res = a * b
+#     return res
+#
+#
+# x = set_plus(5, 6)
+# s = set_multi(5, 10)
+# print(x)
+# print(s)
