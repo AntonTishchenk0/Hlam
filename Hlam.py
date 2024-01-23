@@ -505,5 +505,3 @@
 # df = sin_df(math.pi / 3)
 # print(df)
 
-
-# Task 37
