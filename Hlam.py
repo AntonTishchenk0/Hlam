@@ -505,3 +505,14 @@
 # df = sin_df(math.pi / 3)
 # print(df)
 
+# Task 37
+
+# def fact(num):
+#     sp = []
+#     for i in range(1, num + 1):
+#         if num % i == 0:
+#             sp.append(i)
+#     return sp
+#
+#
+# print(fact(5))
