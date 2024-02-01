@@ -516,3 +516,19 @@
 #
 #
 # print(fact(5))
+
+# Task 38
+
+# def find_all(target, symbol):
+#     n = 0
+#     sp = []
+#     for i in target:
+#         if i == symbol:
+#             sp.append(n)
+#         n += 1
+#     return sp
+#
+#
+# s = 'abcdabcaaa'
+# char = 'a'
+# print(find_all(s, char))
