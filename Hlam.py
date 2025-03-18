@@ -532,3 +532,359 @@
 # s = 'abcdabcaaa'
 # char = 'a'
 # print(find_all(s, char))
+
+# Task 39
+
+# def merge(list1, list2):
+#     res = list1 + list2
+#     res.sort()
+#     return res
+#
+#
+# # считываем данные
+# numbers1 = [int(c) for c in input().split()]
+# numbers2 = [int(c) for c in input().split()]
+#
+# # вызываем функцию
+# print(merge(numbers1, numbers2))
+
+# Task 40
+
+# def quick_merge(lst1, lst2):
+#     result = []
+#     p1, p2 = 0, 0
+#     while p1 < len(lst1) and p2 < len(lst2):
+#         if lst1[p1] < lst2[p2]:
+#             result.append(lst1[p1])
+#             p1 += 1
+#         else:
+#             result.append(lst2[p2])
+#             p2 += 1
+#     if p1 == len(lst1):
+#         result += lst2[p2:]
+#     else:
+#         result += lst1[p1:]
+#     return result
+#
+#
+# res = []
+# for _ in range(int(input())):
+#     num = [int(c) for c in input().split()]
+#     res = quick_merge(res, num)
+# print(*res)
+
+# Task 41
+
+# sec = 1000000
+# secInMin = 60
+# secInHours = secInMin * 60
+# secInDay = secInHours * 24
+#
+# days = sec / secInDay
+# hours = (sec % secInDay) / secInHours
+# minutes = ((sec % secInDay) % secInHours) / secInMin
+# sInD = int(days) * secInDay
+# sInH = int(hours) * secInHours
+# sInM = int(minutes) * secInMin
+# seconds = sec - sInD - sInH - sInM
+#
+# m = sec / 60
+# h = m / 60
+# d = h / 24
+#
+# print(int(m), int(h), int(d))
+# print(secInMin, secInHours, secInDay)
+# print(int(days), int(hours), int(minutes), int(seconds))
+
+# Task 42
+# def draw_triangle():
+#     for i in range(8):
+#         print(' ' * (8 - 1 - i) + '*' * (1 + i * 2))
+#
+#
+# draw_triangle()
+
+# Task 43
+
+# def get_shipping_cost(quantity):
+#     sum = 1000
+#     res = sum + 120 * (quantity - 1)
+#     return res
+#
+#
+# n = int(input())
+#
+# print(get_shipping_cost(n))
+
+# Task 44
+
+# import random
+
+# for i in range(10):
+#     print(random.random())
+# num = random.random()
+# print(num)
+
+# num = random.uniform(10, 17)
+# print(num)
+
+# random.seed(17)   # явно устанавливаем начальное значение для генератора случайных чисел
+
+# for _ in range(10):
+#     print(random.randint(1, 100))
+
+# COINS = [500, 200, 100, 50, 10, 5, 1]  # 5р, 2р, 1р, 50к, 10к, 5к, 1к
+# COIN_NAMES = {
+#     500: "5 рублей",
+#     200: "2 рубля",
+#     100: "1 рубль",
+#     50: "50 копеек",
+#     10: "10 копеек",
+#     5: "5 копеек",
+#     1: "1 копейка"
+# }
+#
+# print("Введите сумму сдачи в копейках:")
+# amount = int(input("> "))
+#
+# result = {}
+# for coin in COINS:
+#     if amount >= coin:
+#         count = amount // coin
+#         result[coin] = count
+#         amount -= count * coin
+#
+# print("Необходимые монеты:")
+# for coin, count in result.items():
+#     if count > 0:
+#         print(f"- {count} x {COIN_NAMES[coin]}")
+
+
+# from random import randrange
+# MIN_NUM = 1
+# MAX_NUM = 49
+# NUM_NUMS = 6
+#
+# ticket_nums = []
+#
+# for i in range(NUM_NUMS):
+#     rand = randrange(MIN_NUM, MAX_NUM + 1)
+#     while rand in ticket_nums:
+#         rand = randrange(MIN_NUM, MAX_NUM + 1)
+#     ticket_nums.append(rand)
+#
+# ticket_nums.sort()
+# print('Номер вашего билета: ', end="")
+# for n in ticket_nums:
+#     print(n, end=' ')
+
+# from random import randrange
+# min_num = 1
+# max_num = 49
+# num_nums = 6
+#
+# ticket_nums = set()
+# while len(ticket_nums) < num_nums:
+#     ticket_nums.add(randrange(min_num, max_num + 1))
+#
+# ticket_nums = sorted(ticket_nums)
+#
+# print('Номер вашего билет: ', end="")
+# for n in ticket_nums:
+#     print(n, end=' ')
+
+# list_1 = []
+# word = input("Введите ваше первое слово: ")
+# list_1.append(word)
+# for i in list_1:
+#     if word == 'End the program':
+#         list_1.pop()
+#         print(list_1)
+#         break
+#     else:
+#         word = input('Введите ваше следующее слово: ')
+#         print('Для завершения ввода введите "End the program": ')
+#         list_1.append(word)
+#
+# list_1 = set(list_1)
+# print(list_1)
+
+# lst = []
+# while lst != '':
+#     print('Для завершения введите: "End the program"')
+#     word = input('Введите ваше первое слово: ')
+#     if word != 'End the program':
+#         lst.append(word)
+#     else:
+#         lst.sort()
+#         print('Программа завершена!')
+#         break
+# lst = set(lst)
+# for i in lst:
+#     print(i)
+
+# lst = []
+# while lst != '':
+#     print('Для завершения введите: "End the program"')
+#     word = input('Введите ваше первое слово: ')
+#     if word not in lst:
+#         lst.append(word)
+#         if word == 'End the program':
+#             lst.pop()
+#             break
+#
+# [print(i) for i in lst]
+
+
+# lst = []
+# sm = 0
+# count = 0
+# while True:
+#     numb = input('Введите ваше число: ')
+#     if numb != '':
+#         lst.append(numb)
+#     else:
+#         break
+# for i in lst:
+#     sm += int(i)
+#     count += 1
+# avg = sm / count
+#
+# print(sm, count, avg)
+
+
+# numbers = []
+# while True:
+#     s = input("Введите число или пустую строку для завершения: ")
+#     if s == "":
+#         break
+#     numbers.append(float(s))
+#
+# if not numbers:
+#     print("Не введено ни одного числа.")
+#     exit()
+#
+# average = sum(numbers) / len(numbers)
+# below = [x for x in numbers if x < average]
+# equal = [x for x in numbers if x == average]
+# above = [x for x in numbers if x > average]
+#
+# print(f"Среднее значение: {average:.2f}")
+#
+# print("Числа ниже среднего:")
+# print(', '.join(map(str, below)) if below else "Нет чисел")
+#
+# if equal:
+#     print("Числа равные среднему:")
+#     print(', '.join(map(str, equal)))
+#
+# print("Числа выше среднего:")
+# print(', '.join(map(str, above)) if above else "Нет чисел")
+
+# coord = input("Введите координаты клетки: ").strip().lower()
+#
+# # Разделение на букву и цифру
+# letter = coord[0]
+# number = int(coord[1])
+#
+# # Преобразование буквы в число (1-8)
+# letter_num = ord(letter) - ord('a') + 1
+#
+# # Цвет первой клетки столбца (вертикаль 1)
+# first_sum = letter_num + 1
+# if first_sum % 2 == 0:
+#     first_color = "черная"
+# else:
+#     first_color = "белая"
+#
+# # Определение цвета текущей клетки
+# if number % 2 == 1:  # Нечетная вертикаль
+#     current_color = first_color
+# else:  # Четная вертикаль
+#     current_color = "белая" if first_color == "черная" else "черная"
+#
+# print(f"Клетка {coord} – {current_color}")
+
+# scrabble = {1: "A, E, I, L, N, O, R, S, T, U", 2: "D, G",
+#             3: "B, C, M, P", 4: "F, H, V, W, Y", 5: "K",
+#             8: "J, X", 10: "Q, Z"}
+# word = str(input("Введите ваше слово: ").upper())
+# count = 0
+# for char in word:
+#     for key in scrabble:
+#         if char in list(scrabble[key]):
+#             count += key
+# print(count)
+
+# lst = []
+# while True:  # Бесконечный цикл до прерывания
+#     print('Для завершения введите пустую строку! ')
+#     word = input('Введите ваше первое слово: ').lower()
+#
+#     if word == '':
+#         break  # Выход из цикла при вводе "End the program"
+#
+#     if word not in lst:
+#         lst.append(word)  # Добавляем слово, если его нет в списке
+#
+# # Выводим список уникальных слов
+# print("\nВведенные слова:")
+# for word in lst:
+#     print(word)
+
+# for i in range(1, 101):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print('Fizz-Buzz!', end='\n')
+#     elif i % 3 == 0:
+#         print('Fizz!', end='\n')
+#     elif i % 5 == 0:
+#         print('Buzz!', end='\n')
+#     else:
+#         print(i, end='\n')
+
+# n = int(input("Введите число n: "))
+#
+# if n < 2:
+#     print("Нет простых чисел.")
+# else:
+#     # Инициализация списка
+#     primes = list(range(n + 1))
+#     primes[0], primes[1] = 0, 0  # 0 и 1 не простые
+#
+#     # Алгоритм решета Эратосфена
+#     for i in range(2, int(n**0.5) + 1):
+#         if primes[i] != 0:
+#             # Обнуляем все кратные i, начиная с i^2
+#             for j in range(i * i, n + 1, i):
+#                 primes[j] = 0
+#
+#     # Вывод всех чисел от 2 до n с заменой непростых на 0
+#     print(f"Числа от 2 до {n} (непростые заменены на 0):")
+#     for number in primes[2:]:
+#         print(number)
+
+
+# def sieve_of_eratosthenes(n):
+#     if n < 2:
+#         return []
+#
+#     primes = list(range(n + 1))  # Создаем список от 0 до n
+#     primes[0], primes[1] = 0, 0  # 0 и 1 не являются простыми
+#
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if primes[i] != 0:
+#             # Вычеркиваем все кратные i, начиная с i^2
+#             for j in range(i * i, n + 1, i):
+#                 primes[j] = 0
+#
+#     # Фильтруем ненулевые элементы (кроме 0 и 1)
+#     result = [x for x in primes if x != 0]
+#     return result
+#
+#
+# # Ввод пользователя
+# n = int(input("Введите число n: "))
+# primes = sieve_of_eratosthenes(n)
+# print(f"Простые числа до {n}:")
+# print(primes)
+
