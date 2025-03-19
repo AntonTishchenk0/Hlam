@@ -888,3 +888,37 @@
 # print(f"Простые числа до {n}:")
 # print(primes)
 
+# year = float(input('Введите возраст для перевода: '))
+# x = 10.5
+# y = 4
+# if year <= 21:
+#     life = year / x
+# else:
+#     life = 2 + (year - 21) / 4
+# print('Собачий возраст равен %.1f' % life)
+
+# n = int(input("Введите число n: "))
+#
+# if n < 2:
+#     print("Нет простых чисел.")
+# else:
+#     primes = list(range(n + 1))
+#     primes[0], primes[1] = 0, 0
+#     for i in range(2, int(n**0.5) + 1):
+#         if primes[i] != 0:
+#             for j in range(i * i, n + 1, i):
+#                 primes[j] = 0
+#
+#     print(f"Простые числа от 2 до {n}:")
+#     for number in primes[2:]:  # Начинаем с индекса 2 (число 2)
+#         if number != 0:
+#             print(number)
+
+# human_age = float(input("Введите человеческий возраст: "))
+#
+# if human_age <= 21:
+#     dog_age = human_age / 10.5
+# else:
+#     dog_age = 2 + (human_age - 21) / 4
+#
+# print(f"Собачий возраст: {dog_age:.1f}")
