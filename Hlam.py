@@ -1002,5 +1002,121 @@
 # какими свойствами он обладает и какие действия совершает. Создайте класс беспилотный автомобиль и сохраните его
 # в виде программного модуля. Импортируете класс и инициализируйте новый объект.
 
-class AutonomousCar:
-    pass
+# class SelfDrivingCar:
+#     def __init__(self, brand: str, model: str, current_location: str):
+#         self.brand = brand
+#         self.model = model
+#         self.current_location = current_location
+#         self.current_speed = 0.0
+#         self.battery_level = 100.0  # Проценты
+#         self.route = None
+#         self.is_on = False
+#         self.safety_system_active = True
+#
+#     def start(self):
+#         if self.battery_level <= 5.0:
+#             print("Ошибка: Заряд батареи слишком низкий для запуска.")
+#             return
+#         self.is_on = True
+#         print(f"{self.brand} {self.model} запущен. Текущее местоположение: {self.current_location}")
+#
+#     def stop(self):
+#         self.is_on = False
+#         self.current_speed = 0.0
+#         print(f"{self.brand} {self.model} остановлен.")
+#
+#     def accelerate(self, speed: float):
+#         if not self.is_on:
+#             print("Автомобиль не запущен.")
+#             return
+#         max_speed = 120.0  # Км/ч
+#         new_speed = self.current_speed + speed
+#         if new_speed > max_speed:
+#             self.current_speed = max_speed
+#             print(f"Достигнута максимальная скорость {max_speed} км/ч")
+#         else:
+#             self.current_speed = new_speed
+#             print(f"Скорость увеличена до {self.current_speed} км/ч")
+#
+#     def decelerate(self, speed: float):
+#         if not self.is_on:
+#             print("Автомобиль не запущен.")
+#             return
+#         new_speed = self.current_speed - speed
+#         if new_speed < 0:
+#             self.current_speed = 0.0
+#             print("Автомобиль полностью остановлен")
+#         else:
+#             self.current_speed = new_speed
+#             print(f"Скорость снижена до {self.current_speed} км/ч")
+#
+#     def set_route(self, destination: str):
+#         self.route = destination
+#         print(f"Назначен маршрут: {self.current_location} → {destination}")
+#
+#     def navigate(self):
+#         if not self.route:
+#             print("Маршрут не установлен")
+#             return
+#         print(f"Начинаю движение к {self.route}...")
+#         # Здесь можно добавить логику навигации
+#
+#     def check_obstacles(self):
+#         # Пример обнаружения препятствий (можно расширить сенсорной логикой)
+#         obstacles = ["Car", "Pedestrian"]  # Пример виртуальных препятствий
+#         if obstacles:
+#             print(f"Обнаружены препятствия: {', '.join(obstacles)}. Запускаю экстренное торможение...")
+#             self.decelerate(self.current_speed)  # Полная остановка
+#         else:
+#             print("Путь свободен")
+#
+#     def charge(self, percentage: float):
+#         if self.is_on:
+#             print("Не могу заряжаться при работающем автомобиле")
+#             return
+#         self.battery_level = min(self.battery_level + percentage, 100.0)
+#         print(f"Заряд батареи: {self.battery_level}%")
+#
+#     def get_status(self):
+#         status = (
+#             f"Статус {self.brand} {self.model}:\n"
+#             f"Маршрут: {self.route or 'Не задан'}\n"
+#             f"Текущая скорость: {self.current_speed} км/ч\n"
+#             f"Заряд батареи: {self.battery_level}%\n"
+#             f"Включён: {'Да' if self.is_on else 'Нет'}\n"
+#         )
+#         print(status)
+#
+#
+# # Создание экземпляра автомобиля
+# tesla = SelfDrivingCar("Tesla", "Model X", "Санкт-Петербург")
+#
+# # Запуск автомобиля
+# tesla.start()
+#
+# # Установка маршрута
+# tesla.set_route("Москва")
+#
+# # Ускорение
+# tesla.accelerate(80)
+#
+# # Проверка препятствий
+# tesla.check_obstacles()
+#
+# # Навигация
+# tesla.navigate()
+#
+# # Снижение скорости
+# tesla.decelerate(30)
+#
+# # Проверка состояния
+# tesla.get_status()
+#
+# # Зарядка
+# tesla.stop()
+# tesla.charge(20)
+#
+# # Попытка запустить при низком заряде
+# low_battery_car = SelfDrivingCar("Tesla", "Model Y", "Новосибирск")
+# low_battery_car.battery_level = 3.0
+# low_battery_car.start()
