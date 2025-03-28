@@ -1426,3 +1426,131 @@
 #
 # if __name__ == "__main__":
 #     main()
+
+# Task
+# Условие Используя примеры из теоретической части 5.1 и 5.2, составьте класс Neuron модели нейрона,
+# принимающего на вход от одного до 10 входных параметров. Запрещается пользоваться библиотекой numpy.
+# На вход подается список. Матричное умножение реализуется с помощью циклов самостоятельно. Класс содержит
+# методы для вычисления взвешенной суммы, а также содержит функции активации из урока.
+
+# import math
+#
+#
+# class Neuron:
+#     def __init__(self, w):
+#         self.w = w
+#
+#     def activate(self, lst):
+#         total = 0
+#         for i in range(len(lst)):
+#             total += lst[i] * self.w[i]
+#         return total
+#
+#     def onestep(self, x):
+#         if x >= 0:
+#             return 1
+#         else:
+#             return 0
+#
+#     def relu(self, x):
+#         return max(0.0, x)
+#
+#     def sigmoid(self, x):
+#         return 1 / (1 + math.exp(-x))
+#
+#
+# bias = 5
+# w = [5, 4, 1, 1]
+# neuron = Neuron(w)
+# lst = [0, 0, 1, 1]
+# sum_res = neuron.activate(lst) - bias
+# onestep_res = neuron.onestep(sum_res)
+# relu_res = neuron.relu(sum_res)
+# sigmoid_res = neuron.sigmoid(sum_res)
+# print(onestep_res)
+# print(relu_res)
+# print(sigmoid_res)
+# print(sum_res)
+
+# С графиками
+
+# import math
+# import matplotlib.pyplot as plt
+#
+#
+# class Neuron:
+#     def __init__(self, weights):
+#         if not (1 <= len(weights) <= 10):
+#             raise ValueError("Количество весов должно быть от 1 до 10")
+#         self.weights = weights
+#
+#     def calculate_weighted_sum(self, inputs):
+#         if len(inputs) != len(self.weights):
+#             raise ValueError("Количество входов и весов должно совпадать")
+#         total = 0
+#         for i in range(len(inputs)):
+#             total += inputs[i] * self.weights[i]
+#         return total
+#
+#     def sigmoid(self, x):
+#         return 1 / (1 + math.exp(-x))
+#
+#     def relu(self, x):
+#         return max(0.0, x)
+#
+#     def step(self, x):
+#         return 1.0 if x >= 0 else 0.0
+#
+#     def predict(self, inputs, activation='sigmoid'):
+#         sum_val = self.calculate_weighted_sum(inputs)
+#         if activation == 'sigmoid':
+#             return self.sigmoid(sum_val)
+#         elif activation == 'relu':
+#             return self.relu(sum_val)
+#         elif activation == 'step':
+#             return self.step(sum_val)
+#         else:
+#             raise ValueError("Неподдерживаемая функция активации")
+#
+#     # Новые методы для визуализации
+#     def plot_activation(self, activation, x_range=(-10, 10), points=100):
+#         """
+#         Построение графика функции активации
+#         """
+#         x = [x_range[0] + i * (x_range[1] - x_range[0]) / points for i in range(points)]
+#         y = []
+#         for xi in x:
+#             if activation == 'sigmoid':
+#                 y_val = self.sigmoid(xi)
+#             elif activation == 'relu':
+#                 y_val = self.relu(xi)
+#             elif activation == 'step':
+#                 y_val = self.step(xi)
+#             else:
+#                 raise ValueError("Неподдерживаемая функция активации")
+#             y.append(y_val)
+#
+#         plt.figure(figsize=(8, 4))
+#         plt.plot(x, y, label=activation)
+#         plt.title(f'График функции активации {activation}')
+#         plt.xlabel('x')
+#         plt.ylabel('y')
+#         plt.grid(True)
+#         plt.legend()
+#         plt.show()
+#
+#
+# weights = [-0.2, -0.5]
+# neuron = Neuron(weights)
+#
+# # Построение графиков функций активации
+# neuron.plot_activation('sigmoid')
+# neuron.plot_activation('relu')
+# neuron.plot_activation('step')
+# sum_res = neuron.calculate_weighted_sum(weights)
+# onestep_res = neuron.step(sum_res)
+# relu_res = neuron.relu(sum_res)
+# sigmoid_res = neuron.sigmoid(sum_res)
+# print(onestep_res)
+# print(relu_res)
+# print(sigmoid_res)
