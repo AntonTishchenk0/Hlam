@@ -1554,3 +1554,108 @@
 # print(onestep_res)
 # print(relu_res)
 # print(sigmoid_res)
+
+
+# Task
+
+# with open('Gadsby.txt', 'r') as file:
+#     read_file = file.read()
+#     new_file = []
+#     read_file = list(read_file.upper().rstrip())
+#     for item in read_file:
+#         if isinstance(item, str) and len(item) == 1 and item.isalpha():
+#             new_file.append(item)
+#
+#
+# def count_letters_case_sensitive(new_file):
+#     counts = {}
+#     for item in new_file:
+#         counts[item] = counts.get(item, 0) + 1
+#     return counts
+#
+#
+# counts_word = count_letters_case_sensitive(new_file)
+# sorted_counts_word = dict(sorted(counts_word.items()))
+# smallest_count = min(sorted_counts_word.values())
+# print(sorted_counts_word)
+# print(smallest_count)
+
+
+# import re
+#
+#
+# def main():
+#     # Чтение файла и очистка данных
+#     with open('Gadsby.txt', 'r') as file:
+#         text = file.read().upper()  # Перевод в нижний регистр
+#
+#     # Извлекаем все слова состоящие только из букв
+#     words = re.findall(r'[A-ZА-Я]+', text)
+#     total_words = len(words)
+#     if total_words == 0:
+#         print("Файл не содержит слов")
+#         return
+#
+#     # Инициализация подсчета для каждой буквы английского алфавита
+#     alphabet = [chr(ord('A') + i) for i in range(26)]
+#     counts = {letter: 0 for letter in alphabet}
+#
+#     # Подсчет вхождений букв в уникальных словах
+#     for word in words:
+#         unique_letters = set(word)
+#         for letter in unique_letters:
+#             if letter in counts:
+#                 counts[letter] += 1
+#
+#     # Расчет процентов
+#     percentages = {}
+#     for letter in alphabet:
+#         percent = (counts[letter] / total_words) * 100
+#         percentages[letter] = round(percent, 2)
+#
+#     # Поиск самой редкой буквы
+#     min_count = min(counts.values())
+#     rare_letters = [letter for letter, count in counts.items() if count == min_count]
+#
+#     # Вывод результатов
+#     print("Статистика по буквам (в % слов):")
+#     for letter in sorted(percentages.keys()):
+#         print(f"{letter}: {percentages[letter]}%")
+#
+#     print("\nСамые редкие буквы:")
+#     print(", ".join(sorted(rare_letters)))
+#
+#
+# if __name__ == "__main__":
+#     main()
+
+# import re
+#
+# with open('Gadsby.txt', 'r') as file:
+#     read_file = file.read().upper()
+#
+#     words = re.findall(r'[A-ZА-Я]+', read_file)
+#     total_words = len(words)
+#     if total_words == 0:
+#         print("Файл не содержит слов")
+#     alphabet = [chr(ord('A') + i) for i in range(26)]
+#     counts = {letter: 0 for letter in alphabet}
+#     for word in words:
+#         unique_letters = set(word)
+#         for letter in unique_letters:
+#             if letter in counts:
+#                 counts[letter] += 1
+#
+#     percentages = {}
+#     for letter in alphabet:
+#         percent = (counts[letter] / total_words) * 100
+#         percentages[letter] = round(percent, 2)
+#     min_count = min(counts.values())
+#     rare_letters = [letter for letter, count in counts.items()
+#                     if count == min_count]
+#     print("Статистика по буквам (в % слов):")
+#     for letter in sorted(percentages.keys()):
+#         print(f"{letter}: {percentages[letter]}%")
+#
+#     print("\nСамые редкие буквы:")
+#     print(", ".join(sorted(rare_letters)))
