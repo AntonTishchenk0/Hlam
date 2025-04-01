@@ -1659,3 +1659,19 @@
 #
 #     print("\nСамые редкие буквы:")
 #     print(", ".join(sorted(rare_letters)))
+
+# Task
+# Парсинг сайта
+# from bs4 import BeautifulSoup
+# import requests
+#
+# url = ('https://2051.vision/category/ii/')
+# html = requests.get(url)
+# soup = BeautifulSoup(html.text, 'html5lib')
+#
+# top_news = soup.find_all('h3', class_='entry-title')
+# filteredNews = []
+#
+# print("Новости из сферы ИИ:")
+# for i, news in enumerate(top_news, 1):
+#     print(f"{i}. {news.get_text().strip()}")
